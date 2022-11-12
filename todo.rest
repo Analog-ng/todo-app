@@ -1,0 +1,40 @@
+@url = "http://localhost:3000"
+
+
+
+GET http://localhost:3000/flight HTTP/1.1
+
+#######
+GET http://localhost:3000/flight/2648ff1d-f16a-4fa6-8c8c-3454dbd07e20 HTTP/1.1
+
+
+######################
+POST http://localhost:3000/flight HTTP/1.1
+Content-Type: application/json
+
+ {
+    "title": "flight to voney",
+    "price": 1000,
+    "number": "123",
+    "date": "2013-12-25",
+    "origin": "SFO",
+    "destination": "LAX"
+  }
+
+
+######################
+PUT http://localhost:3000/flight/2648ff1d-f16a-4fa6-8c8c-3454dbd07e20 HTTP/1.1
+Content-Type: application/json
+
+ {
+    "title": "flight to von",
+    "price": 1000,
+    "number": "12345",
+    "date": "2013-12-26",
+    "origin": "SFO",
+    "destination": "LAX"
+  }
+
+###
+DELETE http://localhost:3000/flight/2648ff1d-f16a-4fa6-8c8c-3454dbd07e20 HTTP/1.1
+
